@@ -7,7 +7,7 @@
 <p align="center">🌒 Back-End : ...</p>
 
 
-<h1 align="center">Auteurs</h1>
+<h1 align="center">Auteur</h1>
 <p align="center">Bourdel Théo - 2021</h1>
 
 
