@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!-- Cette ligne permet d'éxécuter les scripts JS/AJAX -->
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-	<!-- ---------------------------------------------- -->
+	<!--   -->
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -64,7 +64,7 @@
 	<!-- SCRIPT AJAX MENU BURGER -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="script.js"></script>
-	<!--  ---------------------  -->
+	<!--   -->
 
 
 	<main>
@@ -196,7 +196,7 @@
 					});
 				});
 			</script>
-			<!-- ----------------- -->
+			<!--   -->
 
 
 		</section>
