@@ -48,7 +48,7 @@
 		<!-- ACCUEIL -->
 		<div class="presentation">
 			<h1>THEO BOURDEL</h1>
-			<h2>ETUDIANT EN INGENIEURIE DU WEB À <a href="https://www.esgi.fr/?gclid=Cj0KCQjwo-aCBhC-ARIsAAkNQivBuuVi5lyBzNT4VNNosKe92JxM4szInu_VGeieYZ4_te3NbrxO6PkaAtE-EALw_wcB" target="_blank">ESGI</a></h2>
+			<h2>ETUDIANT EN INGÉNIERIE DU WEB À <a href="https://www.esgi.fr/?gclid=Cj0KCQjwo-aCBhC-ARIsAAkNQivBuuVi5lyBzNT4VNNosKe92JxM4szInu_VGeieYZ4_te3NbrxO6PkaAtE-EALw_wcB" target="_blank">ESGI</a></h2>
 
 			<hr>
 
