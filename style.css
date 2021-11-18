@@ -1,3 +1,11 @@
+:root {
+    --degrade-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    --degrade-color-title: -webkit-linear-gradient(left, #ee7752, #e73c7e, #23a6d5);
+    --background-color: white;
+    --text-color: #494949;
+    --logo-color: #494949;
+}
+
 body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -5,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--background-color);
 }
 html {
     scroll-behavior: smooth;
@@ -51,7 +60,7 @@ aside {
     position: fixed;
     top: 0;
     right: -250px;
-    background-color: white;
+    background-color: var(--background-color);
     width: 250px;
     height: 100vh;
     z-index: 999;
@@ -64,7 +73,7 @@ li {
     list-style-type: none;
 }
 aside a {
-    color: black;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -136,7 +145,7 @@ header nav a {
 /* ------------------- ACCUEIL ------------------- */
 
 #accueil-container {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: var(--degrade-color);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     
@@ -227,6 +236,30 @@ h2 {
     background-color: #464646;
     transition: 0.3s ease-in-out;
 }
+.fa-sun, .fa-moon {
+    color: white;
+}
+.darkMod {
+    width: 40px;
+}
+button {
+    position: relative;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 300ms;
+}
+button:hover {
+    transform: scale(0.85);
+}
+button:active {
+    transform: scale(0.95);
+}
 /* RESPONSIVE */
 @media screen and (min-width: 600px) {
     h1 {
@@ -267,6 +300,10 @@ h2 {
     .presentation p {
         text-align: center;
     }
+    .darkMod-container {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -277,6 +314,22 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 60px 60px;
+}
+.fleche {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    display: none;
+}
+.fa-arrow-up {
+    color: var(--logo-color);
 }
 .projets {
     padding: 0 15px 60px 15px;
@@ -290,40 +343,30 @@ h3 {
     font-weight: 700;
     letter-spacing: .05em;
     /* texte dégradé */
-    color: rgb(22, 22, 22);
-    background: white;
-    display: inline-block;
-    position: relative;
+    color: var(--text-color);
     /* --- */
 } 
-h3::before {
-    /* texte dégradé */
-    background: linear-gradient(to right, #ee7752, #e73c7e, #23a6d5);
-    background: -webkit-linear-gradient(left, #ee7752, #e73c7e, #23a6d5);
-    content: '';
-    display: block;
-    mix-blend-mode: screen;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    /* --- */
-}
 p {
     text-align: center;
+    color: var(--text-color);
+}
+.fa-github, .fa-file-pdf {
+    color: var(--logo-color);
 }
 /* projet marathon */
 .projet-marathon {
     display:  flex;
     flex-direction: row;
 }
-.projet-marathon-img img {
+.projet-marathon-img {
     padding: 0 60px 0 0;
+}
+.projet-marathon-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     vertical-align: center;
+    border-radius: 10px;
 }
 .projet-marathon-text {
     text-align: center;
@@ -331,6 +374,7 @@ p {
 }
 .projet-marathon-text h4 {
     font-size: 1.6em;
+    color: var(--text-color);
 }
 .projet-marathon-text-desc {
     text-align: center;
@@ -345,12 +389,15 @@ p {
     flex-direction: row;
     padding: 60px 0 0 0;
 }
-.projet-java-img img {
+.projet-java-img {
     padding: 0 0 0 60px;
+}
+.projet-java-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     vertical-align: center;
+    border-radius: 10px;
 }
 .projet-java-text {
     text-align: center;
@@ -358,6 +405,7 @@ p {
 }
 .projet-java-text h4 {
     font-size: 1.6em;
+    color: var(--text-color);
 }
 .projet-java-text-desc {
     text-align: center;
@@ -372,12 +420,15 @@ p {
     flex-direction: row;
     padding: 60px 0 0 0;
 }
-.projet-veille-img img {
+.projet-veille-img {
     padding: 0 60px 0 0;
+}
+.projet-veille-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     vertical-align: center;
+    border-radius: 10px;
 }
 .projet-veille-text {
     text-align: center;
@@ -385,6 +436,7 @@ p {
 }
 .projet-veille-text h4 {
     font-size: 1.6em;
+    color: var(--text-color);
 }
 .projet-veille-text-desc {
     text-align: center;
@@ -426,7 +478,13 @@ p {
         display: flex;
         flex-direction: column-reverse;
     }
-    .projet-java-img img {
+    .projet-marathon-img {
+        padding: 0 0 0 0;
+    }
+    .projet-java-img {
+        padding: 0 0 0 0;
+    }
+    .projet-veille-img {
         padding: 0 0 0 0;
     }
 }
@@ -492,12 +550,14 @@ p {
 .skill-title h5 {
     font-size: 1.6em;
     text-align: center;
+    color: var(--text-color);
 } 
 .skill-name{
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 20px 0;
+    color: var(--text-color);
 }
 .skill-bar{
     height: 20px;
@@ -511,7 +571,7 @@ p {
     transition: 1s linear;
     position: relative;
     /* fond dégradé (comme la page d'accueil) */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: var(--degrade-color);
     animation: gradient 15s ease infinite;
     -webkit-animation: gradient 15s ease infinite;
     -moz-animation: gradient 15s ease infinite;
@@ -540,14 +600,14 @@ p {
 
 /* ------------------- FOOTER ------------------- */
 footer {
-    background-color: #484848;
+    background-color: #303030;
 }
 #footer-container {
     padding: 20px 30px 20px 30px;
 }
 .footer-title {
     font-weight: 700;
-    font-size: 2.5em;
+    font-size: 2.1em;
     color: white;
 }
 .footer-link {
@@ -588,5 +648,7 @@ footer {
         font-size: 2.0em;
     }
 }
+
+
 
 
